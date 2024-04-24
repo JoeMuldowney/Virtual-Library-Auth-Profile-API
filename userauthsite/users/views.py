@@ -20,7 +20,7 @@ def membership(request):
     password2 = data.get('password2')
     first_name = data.get('firstname')
     last_name = data.get('lastname')
-
+    # confirm password and insert a user object
     if password1 != password2:
         return JsonResponse({'success': False})
     else:
@@ -37,7 +37,7 @@ def member_login(request):
     password = data.get('password')
     if username is None or password is None:
         return JsonResponse({"Error": "You must fill out username and password fields"}, status=400)
-
+    # if user exists log in
     user = authenticate(username=username, password=password)
     if user is not None:
         login(request, user, backend=None)
@@ -48,8 +48,10 @@ def member_login(request):
 @csrf_exempt
 @require_POST
 def member_logout(request):
+    # log user out
     logout(request)
     return JsonResponse({'success': True})
+
 
 @csrf_exempt
 @login_required
