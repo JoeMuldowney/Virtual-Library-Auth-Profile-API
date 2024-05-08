@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        stage('Remove old build'){
+
+        // Stop current docker container
+                sh 'docker ps -q --filter name=django-session | xargs -r docker stop'
+                sh 'docker ps -q --filter name=django-session | xargs -r docker rm'
+        }
         stage('Build') {
             steps {
                 // Checkout source code
@@ -18,10 +24,6 @@ pipeline {
 
                 // Load Docker image
                 sh 'docker load -i django-session.tar'
-
-                // Stop current docker container
-                sh 'docker ps -q --filter name=django-session | xargs -r docker stop'
-                sh 'docker ps -q --filter name=django-session | xargs -r docker rm'
 
                 // Run Docker container
                 sh 'docker run -d -p 8000:8000 --name django-session django-session'
