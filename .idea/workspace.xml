@@ -4,11 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c14dca-31a5-421d-91de-8dca3d823bbe" name="Changes" comment="" />
+    <list default="true" id="29c14dca-31a5-421d-91de-8dca3d823bbe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/userauthsite/books/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DjangoAuth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DjangoAuth.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userauthsite/userauthsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/userauthsite/userauthsite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userauthsite/userauthsite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/userauthsite/userauthsite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userauthsite/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/userauthsite/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userauthsite/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/userauthsite/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userauthsite/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/userauthsite/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userauthsite/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/userauthsite/users/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -29,18 +48,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;development&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Python.views.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "development",
+    "last_opened_file_path": "C:/Users/muldo/GitHubRepos/Virtual Library Project/DjangoAuth"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\muldo\GitHubRepos\DjangoAuth" />

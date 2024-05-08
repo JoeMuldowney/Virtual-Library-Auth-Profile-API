@@ -20,11 +20,11 @@ pipeline {
                 sh 'docker load -i django-session.tar'
 
                 // Stop current docker container
-                sh 'docker ps -q --filter ancestor=django-session | xargs -r docker stop'
-                sh 'docker ps -q --filter ancestor=django-session | xargs -r docker rm'
+                sh 'docker ps -q --filter name=django-session | xargs -r docker stop'
+                sh 'docker ps -q --filter name=django-session | xargs -r docker rm'
 
                 // Run Docker container
-                sh 'docker run -d -p 8000:8000 django-session'
+                sh 'docker run -d -p 8000:8000 --name django-session django-session'
             }
         }
     }
