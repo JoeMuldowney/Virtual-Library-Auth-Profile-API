@@ -3,10 +3,11 @@ pipeline {
 
     stages {
         stage('Remove old build'){
-
+            steps{
         // Stop current docker container
                 sh 'docker ps -q --filter name=django-session | xargs -r docker stop'
                 sh 'docker ps -q --filter name=django-session | xargs -r docker rm'
+            }
         }
         stage('Build') {
             steps {
