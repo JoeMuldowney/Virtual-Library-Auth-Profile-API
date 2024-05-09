@@ -6,7 +6,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import ensure_csrf_cookie, csrf_protect, csrf_exempt
 from django.views.decorators.http import require_POST, require_GET
 from .models import MemberProfile
-import objects
+
 
 # Create your views here.
 

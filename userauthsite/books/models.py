@@ -18,7 +18,7 @@ class Book(models.Model):
     book_description = models.TextField(max_length=225)
     title = models.CharField(max_length=45)
     genre = models.CharField(max_length=25, null=True)
-    year = models.DateField()
+    year = models.DateField(null=True)
     stock = models.IntegerField()
     rented = models.IntegerField()
     sold = models.IntegerField()
