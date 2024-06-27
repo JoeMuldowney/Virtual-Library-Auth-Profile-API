@@ -1,34 +1,52 @@
-from django.shortcuts import render
 import json
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
+from django.core.exceptions import ObjectDoesNotExist
 from django.http import JsonResponse
 from django.views.decorators.csrf import ensure_csrf_cookie, csrf_protect, csrf_exempt
 from django.views.decorators.http import require_POST, require_GET
-from .models import Book
+from django.core.paginator import Paginator
+from .models import Book, Author
 
 
 # Create your views here.
 @require_GET
-def book_search(request):
-    try:
-        books = Book.objects.filter(genre="Thriller")[:5]
-        books_data = []
+@csrf_exempt
+def category_search(request, genre):
 
-        # Iterate over each book to extract its details
-        for book in books:
-            books_data.append({
-                'title': book.title,
-                'book_description': book.book_description,
-                'year': book.year,
-                'buy_amount': book.buy_amount,
-                'rent_amount': book.rent_amount,
-                'stock': book.stock
-            })
+
+        books = Book.objects.filter(genre=genre)
+        paginator = Paginator(books, 4)
+
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        serialized_books = list(page_obj.object_list.values())
 
         # Return the list of book details as JSON response
-        return JsonResponse({'books': books_data})
+        return JsonResponse(
+            {'books': serialized_books, 'page_number': page_obj.number, 'total_pages': paginator.num_pages})
 
-    except:
-        return JsonResponse({'error': 'Book genre does not exist'}, status=404)
+
+@require_GET
+@csrf_exempt
+def view_book(request, bookId):
+
+    try:
+        book = Book.objects.get(id=bookId)
+
+        if book.author_id:
+            author = Author.objects.get(id=book.author_id)
+            author_name = author.name
+
+        return JsonResponse({'book': {
+            'id': book.id,
+            'title': book.title,
+            'book_description': book.book_description,
+            'author': author_name,
+            'genre': book.genre,
+            'buy_amount': book.buy_amount,
+            'rent_amount': book.rent_amount
+            }})
+    except ObjectDoesNotExist:
+        return JsonResponse({'error': 'Book not found'}, status=404)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
+
