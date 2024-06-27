@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29c14dca-31a5-421d-91de-8dca3d823bbe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userauthsite/books/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/userauthsite/books/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userauthsite/books/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/userauthsite/books/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userauthsite/books/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/userauthsite/books/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userauthsite/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/userauthsite/books/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userauthsite/userauthsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/userauthsite/userauthsite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userauthsite/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/userauthsite/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userauthsite/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/userauthsite/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userauthsite/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/userauthsite/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userauthsite/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userauthsite/.gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +61,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\muldo\GitHubRepos\Virtual Library Project\DjangoAuth" />
       <recent name="C:\Users\muldo\GitHubRepos\DjangoAuth" />
       <recent name="C:\Users\muldo\GitHubRepos\DjangoAuth\userauthsite" />
     </key>

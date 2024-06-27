@@ -8,8 +8,8 @@ pipeline {
         stage('Remove old build'){
             steps{
         // Stop and remove current docker container to free up space
-                sh 'docker ps -q --filter name=django-session | xargs -r docker stop'
-                sh 'docker ps -q --filter name=django-session | xargs -r docker rm'
+                sh 'docker ps -q --filter name=vlibrarybackend | xargs -r docker stop'
+                sh 'docker ps -q --filter name=vlibrarybackend | xargs -r docker rm'
             }
         }
         stage('Build') {
@@ -18,7 +18,7 @@ pipeline {
                 checkout scm
 
                 // Build Docker image
-                sh 'docker build -t django-session .'
+                sh 'docker build -t vlibrarybackend .'
             }
         }
         stage('Push to Docker Hub') {
@@ -38,7 +38,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-            sh 'docker run -d -p 8000:8000 --name django-session joemuldowney/virtual_library_auth'
+            sh 'docker run -d -p 8000:8000 --name vlibrarybackend joemuldowney/virtual_library_auth'
             }
         }
     }
