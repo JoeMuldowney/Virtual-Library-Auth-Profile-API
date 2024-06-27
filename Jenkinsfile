@@ -29,7 +29,7 @@ pipeline {
                     sh 'docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD'
 
                     // Tag Docker image
-                    sh 'docker tag django-session joemuldowney/virtual_library_auth'
+                    sh 'docker tag vlibrarybackend joemuldowney/virtual_library_auth'
 
                     // Push Docker image to Docker Hub
                     sh 'docker push joemuldowney/virtual_library_auth'
