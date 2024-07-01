@@ -7,7 +7,7 @@ from django.core.paginator import Paginator
 from .models import Book, Author
 
 
-# Create your views here.
+
 @require_GET
 @csrf_exempt
 def category_search(request, genre):
