@@ -8,8 +8,9 @@ pipeline {
         stage('Remove old build'){
             steps{
         // Stop and remove current docker container to free up space
-                sh 'docker ps -q --filter name=vlibrarybackend | xargs -r docker stop'
-                sh 'docker ps -q --filter name=vlibrarybackend | xargs -r docker rm'
+                sh 'docker stop vlibrarybackend || true'
+                sh 'docker rm vlibrarybackend || true'
+                sh 'docker system prune -af'
             }
         }
         stage('Build') {
@@ -34,7 +35,7 @@ pipeline {
                     // Push Docker image to Docker Hub
                     sh 'docker push joemuldowney/virtual_library_auth'
            }
-            }
+          }
         }
         stage('Deploy') {
             steps {
