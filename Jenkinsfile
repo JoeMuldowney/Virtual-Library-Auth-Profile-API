@@ -39,7 +39,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-            sh 'docker run -d -p 8000:8000 --name vlibrarybackend joemuldowney/virtual_library_auth'
+            sh 'docker run -d -p 8000:8000 --name vlibrarybackend joemuldowney/djangoauth'
             }
         }
     }
