@@ -44,7 +44,14 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-            sh 'docker run -d -p 8000:8000 --name vlibrarybackend joemuldowney/djangoauth'
+                    sh 'docker run -d -p 8000:8000 --name vlibrarybackend \
+                    -e DB_NAME=$DB_NAME \
+                    -e DB_USER=$DB_USER \
+                    -e DB_PASS=$DB_PASS \
+                    -e DB_HOST=$DB_HOST \
+                    -e SECRET_KEY=$SECRET_KEY \
+                    joemuldowney/djangoauth'
+
             }
         }
     }
