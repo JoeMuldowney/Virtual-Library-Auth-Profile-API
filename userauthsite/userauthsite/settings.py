@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['18.220.48.41','localhost']
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -89,7 +89,7 @@ DATABASES = {
         'NAME': os.environ.get('DB_NAME'),
         'USER': os.environ.get('DB_USER'),
         'PASSWORD': os.environ.get('DB_PASS'),
-        'HOST': 'django.c58wwq0e013p.us-east-2.rds.amazonaws.com',
+        'HOST': os.environ.get('DB_HOST'),
         'PORT': '5432'
     }
 }
