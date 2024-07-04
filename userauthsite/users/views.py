@@ -71,7 +71,7 @@ def member_login(request):
 @require_GET
 def log_status(request):
     if request.user.is_authenticated:
-        return JsonResponse({'is_authenticated': True},status=201)
+        return JsonResponse({'is_authenticated': True},status=200)
     else:
         return JsonResponse({'is_authenticated': False},status=401)
 
@@ -85,7 +85,7 @@ def member_logout(request):
         logout(request)
         return JsonResponse({'success': True}, status=202)
     else:
-        return JsonResponse({'Error': "Not logged in"}, status=400)
+        return JsonResponse({'Error': "Not logged in"}, status=401)
 
 
 @csrf_exempt
