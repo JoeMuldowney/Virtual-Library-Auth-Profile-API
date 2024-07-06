@@ -11,7 +11,7 @@ from books.models import Book
 from books.models import Author
 
 
-# Create your views here.
+
 
 @csrf_exempt
 @require_POST
