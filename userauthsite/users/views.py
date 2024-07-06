@@ -310,7 +310,7 @@ def user_verify(request):
     session_id = request.COOKIES.get('sessionid')
 
     if session_id:
-        # Check if the session ID is valid
+
         if request.session.exists(session_id):
             # Get the user associated with the session
             user_id = request.session.get('_auth_user_id')
