@@ -288,6 +288,7 @@ def saved_books_list(request):
 @csrf_exempt
 @login_required()
 def delete_book(request, id):
+
     if request.user.is_authenticated:
         try:
             user = request.user
@@ -295,7 +296,6 @@ def delete_book(request, id):
             book.delete()
 
             return JsonResponse({'success': 'Book removed from saved books'}, status=200)
-
         except:
             return JsonResponse({'error': 'Book does not exist in saved book list'}, status=404)
     else:
@@ -324,5 +324,3 @@ def user_verify(request):
     else:
         # Return a JSON response indicating that the session ID is missing
         return JsonResponse({'success': False, 'error': 'Session ID missing'}, status=400)
-
-
