@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Remove old build'){
             steps{
-        // Stop and remove current docker container to free up space
+
                 sh 'docker stop vlibrarybackend || true'
                 sh 'docker rm vlibrarybackend || true'
                 sh 'docker system prune -af'
