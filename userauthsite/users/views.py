@@ -29,9 +29,10 @@ def membership(request):
         return JsonResponse({'success': False},status=401)
     else:
         user = User.objects.create_user(
-            username=username, email=email, password=password1, first_name=first_name, last_name=last_name
-        )
-        return JsonResponse({'success': True}, status=202)
+            username=username, email=email, password=password1, first_name=first_name, last_name=last_name)
+        login_user = authenticate(username=username, password=password1)
+        login(request, login_user, backend=None)
+        return JsonResponse({'success': True, 'user_id': login_user.id}, status=202)
 
 @csrf_exempt
 @require_http_methods(["PATCH"])
@@ -71,7 +72,8 @@ def member_login(request):
 @require_GET
 def log_status(request):
     if request.user.is_authenticated:
-        return JsonResponse({'is_authenticated': True},status=200)
+        user = request.user
+        return JsonResponse({'is_authenticated': True, 'user_id':user.id},status=200)
     else:
         return JsonResponse({'is_authenticated': False},status=401)
 
@@ -324,3 +326,4 @@ def user_verify(request):
     else:
         # Return a JSON response indicating that the session ID is missing
         return JsonResponse({'success': False, 'error': 'Session ID missing'}, status=400)
+
