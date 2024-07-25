@@ -1,5 +1,5 @@
 # Virtual Library
-This microservice creates an API using the Djanogo framework for its built-in authentication for user creation and user sessions.  Also, I utlized the Django framework using custom models implemnting user profiles, user accounts features, and a book store. 
+This microservice creates an API using the Djanogo framework for its built-in authentication for user creation and user sessions.  Also, I utlized the Django framework using custom models implemnting user profiles, account features, and a book store. 
 
 ## Table of Contents
 - [Features](#features)
