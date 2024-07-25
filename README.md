@@ -1,5 +1,5 @@
 # Virtual Library
-This microservice creates an API using the Djanogo framework for built-in authentication.  Also, I utlized the Django framework using custom models implemnting user profiles, account features, and a book store. 
+This microservice provides an API using the Django framework, featuring built-in authentication. It includes custom models for user profiles, account management, and a book store.
 
 ## Table of Contents
 - [Features](#features)
@@ -8,17 +8,17 @@ This microservice creates an API using the Djanogo framework for built-in authen
 # Features
 
 1. **Authentication/Profile Model**
-   - Create, update, and delete users created by the user
-   - Session cookies are used to track user logged in status and restrict features when the user is not logged in
-   - Endpoints for user to update their profiles and accounts
+   - Create, update, and delete user accounts
+   - Session cookies are used to track login status and restrict access to features when not logged in
+   - Endpoints for users to update their profiles and account details
 
 2. **Book Model**
-   - Offers one to many relationship between an authors table and a books table
-   - Well defined endpoints to query books by category and get more details on a book by id
+   - Implements a one-to-many relationship between authors and books
+   - Well-defined endpoints to query books by category and retrieve book details by ID
   
 3. **Account Feature Models**
-   - Utilize a one many relationship with the authentication table
-   - Well defined endpoints to view saved books and get purchase history
+   - Utilizes a one-to-many relationship with the authentication table
+   - Well-defined endpoints to view saved books and access purchase histor
       
 # **Technologies**
 
