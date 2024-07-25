@@ -22,11 +22,11 @@ This microservice creates an API using the Djanogo framework for built-in authen
       
 # **Technologies**
 
-1. Languages
+1. **Languages**
    - Python
-2. Frameworks
+2. **Frameworks**
    - Django
-3. Tools
+3. **Tools**
    - Docker
    - Jenkins
    - Git
